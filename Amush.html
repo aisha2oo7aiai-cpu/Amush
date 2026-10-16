@@ -17,6 +17,7 @@
     <a href="#" class="logo">AMUSH</a>
     <nav class="nav-links" aria-label="Main">
       <a href="#model">Features</a>
+      <a href="#community">Community</a>
       <a href="#terms">Terms</a>
       <a href="#model">Model</a>
       <a href="#" class="btn btn-soft">Get Started</a>
@@ -41,21 +42,21 @@
 
       <div class="panel">
         <div class="panel-bar">
-          <span class="panel-logo">&#9635; Reftfore</span>
+          <span class="panel-logo">&#9635; Amush</span>
           <nav class="panel-links">
             <a href="#" class="muted">Home</a>
-            <a href="#">Borology</a>
-            <a href="#">Vichaly</a>
-            <a href="#">Doctuloy</a>
+            <a href="#">About us</a>
+            <a href="#">Resources</a>
+            <a href="#">service</a>
           </nav>
           <a href="#" class="btn btn-blue">Show docs</a>
         </div>
 
-        <div class="blob" aria-hidden="true"></div>
-        <h2 class="panel-title">FOR STUDENTS</h2>
+        
+        <h2 class="panel-title">Your life Matters</h2>
 
         <div class="mini-card">
-          <strong>Llewe</strong>
+          <strong>Active Status</strong>
           <small>340 10W</small>
           <span class="dots"><i></i><i></i></span>
         </div>
@@ -76,6 +77,53 @@
           <button class="go" aria-label="Send">&#187;</button>
         </div>
       </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="community" id="community">
+      <h2>You're not the only one</h2>
+      <p class="sub">Join a small, moderated circle of students going through something similar. Anonymous by default.</p>
+
+      <div class="chips" role="group" aria-label="Choose what you're going through">
+        <button class="chip active" data-topic="all">All</button>
+        <button class="chip" data-topic="exam">Exam pressure</button>
+        <button class="chip" data-topic="career">Career pressure</button>
+        <button class="chip" data-topic="marriage">Marriage pressure</button>
+        <button class="chip" data-topic="loan">Education loan</button>
+        <button class="chip" data-topic="homesick">Homesick</button>
+        <button class="chip" data-topic="lonely">Feeling lonely</button>
+        <button class="chip chip-crisis" data-topic="crisis">Suicidal thoughts</button>
+      </div>
+
+      <div class="crisis-box" id="crisisBox" hidden>
+        <strong>Please talk to a trained person right now.</strong>
+        <p>Peer circles are not safe enough for this. Call <b>Tele-MANAS: 14416</b> (free, 24/7) or your nearest emergency number. You can also tell someone you trust to stay with you.</p>
+      </div>
+
+      <div class="circles" id="circles"></div>
+
+      <div class="room" id="room" hidden>
+        <div class="room-head">
+          <div><strong id="roomName"></strong><small id="roomMeta"></small></div>
+          <button class="link-btn" id="leaveRoom">Leave</button>
+        </div>
+        <div class="msgs" id="msgs" aria-live="polite"></div>
+        <div class="crisis-inline" id="crisisInline" hidden>
+          It sounds like you're in a lot of pain. Please call <b>Tele-MANAS 14416</b> now. You don't have to carry this alone.
+        </div>
+        <div class="composer">
+          <input id="msgInput" type="text" placeholder="Share what's on your mind..." aria-label="Message">
+          <button class="go" id="sendMsg" aria-label="Send">&#187;</button>
+        </div>
+        <small class="demo-note">Demo only: messages stay in your browser. A real version needs a backend.</small>
+      </div>
+
+      <ul class="rules">
+        <li>Be kind. No advice that sounds like a diagnosis or medication tips.</li>
+        <li>Never share your real name, phone number or college.</li>
+        <li>Moderators can remove messages. Use <b>Report</b> if something feels unsafe.</li>
+        <li>Peer support is not therapy. If you're in crisis, call 14416.</li>
+      </ul>
     </section>
 
     <!-- MODEL & SAFETY -->
@@ -121,19 +169,20 @@
         <h4>TERMS &amp; CONDITIONS</h4>
         <p>Not pharmacological treatments; the treatment of disorders of mind by psychological means only;</p>
         <p>Non-Clinical Boundary: support and coping, not medical diagnoses.</p>
+        <p><a href="#" class="open-terms terms-link">Read the full Terms and Conditions</a></p>
       </div>
       <div>
         <h4>Service</h4>
-        <p>Free first 2-3 months to train our AI.</p>
+        <p>Amush offers immediate, 24/7 AI-powered therapy and guided mental wellness tools designed for instant, private emotional support whenever you need it. As your personal wellness companion, our smart AI helps you process stress, track your mood, and practice coping strategies—while seamlessly preparing you for deep, 1-on-1 care with licensed human psychotherapists, launching very soon.</p>
       </div>
       <div>
         <h4>Service</h4>
         <ul>
           <li>Psychologists/Counselors: psychological means only</li>
-          <li><u>Does not prescribe medications.</u></li>
+          <li><u>No Medication:</u> The Application does not provide, prescribe, administer, or recommend any medication, drugs, or pharmaceutical treatments.</li>
         </ul>
       </div>
-      <div class="social" aria-label="Social links">
+      <div class="social" aria-label="Social links"
         <a href="#" aria-label="Chat">&#9679;</a>
         <a href="#" aria-label="Facebook">f</a>
         <a href="#" aria-label="Twitter">t</a>
@@ -142,10 +191,83 @@
     </div>
 
     <div class="copyright">
-      <span>&copy; 2024 Amush | amush.com | All rights reserved.</span>
+      <span>&copy; 2026 Amush | amush.com | All rights reserved. | <a href="#" class="open-terms terms-link">Terms and Conditions</a></span>
       <span class="share"><a href="#">Share</a><a href="#">Tweet</a><a href="#">Gam</a></span>
     </div>
   </footer>
 
+  <!-- TERMS & CONDITIONS MODAL -->
+  <div class="tc-overlay" id="tcOverlay" hidden>
+    <div class="tc-modal" role="dialog" aria-modal="true" aria-labelledby="tcTitle" aria-describedby="tcHint">
+      <h2 id="tcTitle">Terms and Conditions</h2>
+      <p class="tc-sub">Please read these before using Amush.</p>
+
+      <div class="tc-scroll" id="tcScroll" tabindex="0" aria-label="Terms and Conditions text">
+        <p><small>Version 1.0 &middot; Draft: have this reviewed by a qualified lawyer before launch.</small></p>
+
+        <h3>1. What Amush is</h3>
+        <p>Amush is an AI-based support tool for students. It offers non-pharmacological, Cognitive Behavioural Therapy (CBT) informed support: coping strategies, guided reflection and emotional support delivered through psychological means only.</p>
+
+        <h3>2. What Amush is not</h3>
+        <p>Amush does not diagnose any condition. It is not a substitute for a licensed psychologist, counselor or psychiatrist. It is not a medical service and does not provide emergency care.</p>
+
+        <h3>3. No medication or prescriptions</h3>
+        <p>Amush does not prescribe, recommend, adjust or comment on pharmaceutical drugs or dosages. Only a licensed psychiatrist or medical doctor can prescribe medication. Please do not start, stop or change any medication because of anything on this platform.</p>
+
+        <h3>4. Escalation and referral to a licensed psychiatrist</h3>
+        <p>If our systems or moderators detect signs of high risk or severe distress (for example self-harm, suicidal thoughts, abuse, psychosis-like symptoms, or distress that is not improving), Amush will stop offering ordinary coping support and will:</p>
+        <ul>
+          <li>show you emergency and helpline contacts, including Tele-MANAS (14416);</li>
+          <li>strongly advise you to consult a licensed psychiatrist or mental health professional in person; and</li>
+          <li>where our process allows, notify a human responder or helpline contact.</li>
+        </ul>
+        <p>Referral to a licensed psychiatrist is mandatory for sensitive or high-risk cases. Amush will not continue to act as your only source of support in such cases.</p>
+
+        <h3>5. Eligibility</h3>
+        <p>Only students who meet our eligibility criteria may use Amush. Amush is not suitable for people who are in crisis, are extremely emotionally vulnerable, or need clinical treatment. If that is you, please see a professional in person. If you are under 18, you must have the consent of a parent or guardian.</p>
+
+        <h3>6. Limits of AI</h3>
+        <p>Amush uses AI that can make mistakes, misunderstand you or give incomplete advice. Treat responses as suggestions, not professional advice. Results vary from person to person and no outcome is guaranteed.</p>
+
+        <h3>7. Peer community</h3>
+        <p>Peer circles are for mutual support, not treatment. Keep your identity private, be respectful, and do not give medical advice or share another person's information. Moderators may remove content or accounts that break these rules. Peer circles are not available for people experiencing suicidal thoughts; please contact a helpline instead.</p>
+
+        <h3>8. Your privacy and data</h3>
+        <p>Your conversations may be stored and used to operate, secure and improve the service, including training our AI. We will handle your personal data in line with applicable Indian law, including the Digital Personal Data Protection Act, 2023. We will not sell your personal data. You may ask us to access or delete your data by contacting us.</p>
+
+        <h3>9. Free access period</h3>
+        <p>The first 2-3 months are free while we train and evaluate our AI. Terms for later use will be shared with you in advance.</p>
+
+        <h3>10. Your responsibilities</h3>
+        <p>You agree to give honest information, use Amush only for yourself, not misuse it or other users, and seek professional or emergency help when you need it.</p>
+
+        <h3>11. Limitation of liability</h3>
+        <p>To the extent permitted by law, Amush and its team are not liable for any loss or harm arising from your use of the service or from reliance on its responses. Nothing here limits any right you have that cannot be limited by law.</p>
+
+        <h3>12. Changes and contact</h3>
+        <p>We may update these Terms. If we make important changes, we will ask for your agreement again. Questions: contact us through amush.com.</p>
+
+        <h3>In an emergency</h3>
+        <p>If you or someone near you is in danger, call your local emergency number or Tele-MANAS at 14416 (free, 24/7) right now.</p>
+
+        <p class="tc-end"><em>End of Terms and Conditions</em></p>
+      </div>
+
+      <p class="tc-hint" id="tcHint">Scroll to the end of the text to continue.</p>
+
+      <label class="tc-check" id="tcCheckWrap">
+        <input type="checkbox" id="tcCheck">
+        <span>I have read and agree to the Terms and Conditions</span>
+      </label>
+
+      <div class="tc-actions">
+        <button class="btn btn-blue tc-btn" id="tcAgree" disabled>Agree &amp; Continue</button>
+        <button class="btn btn-soft tc-btn" id="tcClose" hidden>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="terms.js"></script>
 </body>
 </html>

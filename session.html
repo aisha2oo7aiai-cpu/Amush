@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Check-in | Amush</title>
+  <meta name="description" content="Check in with your mood, chat, and get affirmations and exercises.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="session.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="index.html" class="logo">AMUSH</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#terms">Terms</a>
+      <a href="session.html" class="btn btn-soft" aria-current="page">My Sessions</a>
+      <a href="session.html" class="btn btn-soft">Get Started</a>
+
+    </nav>
+  </header>
+
+  <main class="session">
+    <!-- HEADER -->
+    <section class="hero">
+      <h1>Your Daily Check-in</h1>
+      <p class="tagline">Support and Coping Strategies, Not Diagnoses</p>
+    </section>
+
+    <!-- MOOD CHECK-IN -->
+    <section class="mood-card" aria-labelledby="moodQ">
+      <h2 id="moodQ">How are you feeling today?</h2>
+      <div class="moods" id="moods" role="group" aria-labelledby="moodQ">
+        <button class="mood" data-mood="bad"       aria-pressed="false"><span class="emoji" aria-hidden="true">😞</span><span>Bad</span></button>
+        <button class="mood" data-mood="fine"      aria-pressed="false"><span class="emoji" aria-hidden="true">😐</span><span>Fine</span></button>
+        <button class="mood" data-mood="well"      aria-pressed="false"><span class="emoji" aria-hidden="true">🙂</span><span>Well</span></button>
+        <button class="mood" data-mood="excellent" aria-pressed="false"><span class="emoji" aria-hidden="true">😄</span><span>Excellent</span></button>
+      </div>
+      <p class="mood-status" id="moodStatus" aria-live="polite">Pick the one that fits best right now.</p>
+      <div class="soft-alert" id="lowMoodNote" hidden>
+        I'm sorry today is hard. If it ever feels too much, call <b>Tele-MANAS 14416</b> (free, 24/7) or talk to someone you trust.
+      </div>
+    </section>
+
+    <!-- DATE-WISE JOURNAL -->
+    <section class="journal" aria-labelledby="journalH">
+      <h2 id="journalH">Your journal</h2>
+      <p class="sub">Each day has its own chat, affirmation and exercises. Entries marked <em>Sample</em> are demo data.</p>
+      <div class="days" id="days"></div>
+    </section>
+  </main>
+
+  <footer class="session-foot">
+    <p>Amush offers coping support, not diagnosis or medical treatment. In an emergency call <b>Tele-MANAS 14416</b> or your local emergency number.</p>
+    <p><a href="index.html">&larr; Back to home</a></p>
+  </footer>
+
+  <!-- SHARED MODAL (chat, affirmation, exercises) -->
+  <div class="m-overlay" id="modal" hidden>
+    <div class="m-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="m-head">
+        <button class="m-icon" id="modalBack" aria-label="Back" hidden>&larr;</button>
+        <h3 id="modalTitle"></h3>
+        <button class="m-icon" id="modalClose" aria-label="Close">&#10005;</button>
+      </div>
+      <div class="m-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="session.js"></script>
+</body>
+</html>
