@@ -4,6 +4,12 @@ Amush is a mental-wellness companion for students. This repository contains the 
 
 Each student gets their own account and profile. Every request is tied to the logged-in student, so nobody can see another student's data.
 
+## Live demo
+
+- **Website:** https://amush-studio.ai.studio
+
+Note: the free hosting plan may put the backend to sleep, so the first request can take up to a minute. Please wait a moment and refresh.
+
 ## Project files
 
 | File | What it is |
